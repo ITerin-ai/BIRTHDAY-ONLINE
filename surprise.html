@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Realistic Cake</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      background-image: url('bg sp.jpg'); /* Replace with your image */
+      font-family: Arial, sans-serif;
+    }
+
+    .cake-container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Plate */
+    .plate {
+      width: 250px;
+      height: 40px;
+      background: radial-gradient(circle, #d1c4ff, #b7a6ff);
+      border-radius: 50%;
+      margin-top: 20px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Bottom Layer */
+    .bottom-layer {
+      width: 180px;
+      height: 100px;
+      background: linear-gradient(to bottom, #c9a4f8, #a57ce5);
+      border-radius: 20px;
+      position: relative;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .bottom-layer .icing {
+      position: absolute;
+      top: -20px;
+      width: 100%;
+      height: 40px;
+      background: #fff;
+      border-radius: 50%;
+      clip-path: polygon(0 0, 100% 0, 100% 80%, 85% 90%, 65% 75%, 50% 85%, 35% 65%, 15% 85%, 0 70%);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Top Layer */
+    .top-layer {
+      width: 120px;
+      height: 70px;
+      background: linear-gradient(to bottom, #f6cdfd, #e2a8f6);
+      border-radius: 20px;
+      position: absolute;
+      top: -60px;
+      left: 50%;
+      transform: translateX(-50%);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .top-layer .icing {
+      position: absolute;
+      top: -15px;
+      width: 100%;
+      height: 30px;
+      background: #fff;
+      border-radius: 50%;
+      clip-path: polygon(0 0, 100% 0, 100% 80%, 85% 90%, 65% 75%, 50% 85%, 35% 65%, 15% 85%, 0 70%);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Candles */
+    .candle {
+      position: absolute;
+      width: 10px;
+      height: 50px;
+      background: linear-gradient(to bottom, #ffb3ff, #ff80ff);
+      border-radius: 5px;
+      top: -110px;
+    }
+
+    .candle:nth-child(4) {
+      left: 70%;
+      transform: translateX(-50%);
+    }
+
+    .candle:nth-child(5) {
+      left: calc(50% - 50px);
+      transform: translateX(-50%);
+    }
+
+    .candle:nth-child(6) {
+      left: calc(50% + 50px);
+      transform: translateX(-50%);
+    }
+
+    /* Flame */
+    .flame {
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      width: 12px;
+      height: 20px;
+      background: radial-gradient(circle, #ffcc00, #ff6600);
+      border-radius: 50%;
+      transform: translateX(-50%);
+      animation: flicker 1.5s infinite ease-in-out;
+    }
+
+    @keyframes flicker {
+      0%, 100% {
+        transform: translateX(-50%) scale(1);
+      }
+      50% {
+        transform: translateX(-50%) scale(1.2);
+      }
+    }
+
+    /* Audio Controls */
+    .audio-container {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .audio-container p {
+      margin: 10px 0;
+      font-size: 25px;
+      color: #e4d0fd;
+    }
+     /* Back Button */
+     .back-button {
+            display: block;
+            margin: 2px auto;
+            text-align: center;
+            background: #ff6f61;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            width: 200px;
+            text-align: center;
+            font-size: 16px;
+            transition: background 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: #e65b4d;
+        }
+  </style>
+</head>
+<body>
+  <div class="cake-container">
+    <div class="bottom-layer">
+      <div class="icing"></div>
+    </div>
+    <div class="top-layer">
+      <div class="icing"></div>
+    </div>
+    <div class="candle">
+      <div class="flame"></div>
+    </div>
+    <div class="candle">
+      <div class="flame"></div>
+    </div>
+    <div class="candle">
+      <div class="flame"></div>
+    </div>
+    <div class="plate"></div>
+  </div>
+
+  <!-- Audio Player -->
+  <div class="audio-container">
+    <p>🎵 Happy Birthday Song For bb 🎶</p>
+    <audio controls autoplay loop>
+      <source src="HAPPY BEDAY.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+  <!-- Back Button -->
+  <a href="page.html" class="back-button">Back to Main</a>
+</body>
+</html>

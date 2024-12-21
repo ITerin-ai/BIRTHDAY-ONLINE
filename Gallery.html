@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Just Gojo Moments</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #1a1a1a;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 15px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #ff6f61;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 250px; /* Set a fixed height for images */
+            object-fit: cover; /* Ensures images maintain aspect ratio */
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Lightbox Styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 80%;
+            border-radius: 10px;
+            animation: zoomIn 0.3s ease;
+        }
+
+        .lightbox .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 30px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.9);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+
+        /* Back Button */
+        .back-button {
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            background: #ff6f61;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            width: 200px;
+            text-align: center;
+            font-size: 16px;
+            transition: background 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: #e65b4d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>SWEET MOMENTS</h1>
+
+        <!-- Photo Gallery -->
+        <div class="gallery">
+            <img src="ph1.jpg" alt="Gojo Moment 1">
+            <img src="ph2.jpg" alt="Gojo Moment 2">
+            <img src="ph3.jpg" alt="Gojo Moment 3">
+            <img src="ph4.jpg" alt="Gojo Moment 4">
+            <img src="ph5.jpg" alt="Gojo Moment 5">
+            <img src="ph6.jpg" alt="Gojo Moment 6">
+            <img src="ph7.jpg" alt="Gojo Moment 7">
+            <img src="ph8.jpg" alt="Gojo Moment 8">
+            <img src="ph9.jpg" alt="Gojo Moment 9">
+        </div>
+
+        <!-- Lightbox -->
+        <div class="lightbox" id="lightbox">
+            <span class="close" onclick="closeLightbox()">×</span>
+            <img id="lightbox-img" src="" alt="Enlarged Image">
+        </div>
+
+        <!-- Back Button -->
+        <a href="page.html" class="back-button">Back to Main</a>
+    </div>
+
+    <script>
+        // Lightbox functionality
+        const galleryImages = document.querySelectorAll('.gallery img');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        galleryImages.forEach(image => {
+            image.addEventListener('click', () => {
+                lightbox.style.display = 'flex';
+                lightboxImg.src = image.src;
+            });
+        });
+
+        function closeLightbox() {
+            lightbox.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

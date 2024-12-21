@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Login</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(circle at top, #ff9a9e, #fad0c4, #fad0c4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .login-container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 350px;
+            animation: slideIn 0.8s ease-out;
+        }
+        .login-container h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #ff6f61;
+        }
+        .login-container input {
+            width: 100%;
+            padding: 15px;
+            margin: 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 30px;
+            outline: none;
+            transition: 0.3s;
+        }
+        .login-container input:focus {
+            border-color: #ff6f61;
+            box-shadow: 0 0 5px #ff6f61;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(to right, #ff6f61, #ff8567);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        .login-container button:hover {
+            background: linear-gradient(to left, #ff6f61, #ff8567);
+            transform: scale(1.05);
+        }
+        .success-message {
+            color: #28a745;
+            display: none;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .bubbles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+        .bubbles span {
+            position: absolute;
+            display: block;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            animation: bubbleMove 10s linear infinite;
+        }
+        .bubbles span:nth-child(odd) {
+            animation-duration: 8s;
+        }
+        @keyframes bubbleMove {
+            0% {
+                transform: translateY(100vh) scale(0.5);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-10vh) scale(1);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h1>🎉Birthday Login 🎂</h1>
+        <input type="text" id="name" placeholder="Your Name" />
+        <input type="date" id="dob" placeholder="Your Birth Date" />
+        <button onclick="goToNextPage()">Enter Now</button>
+    </div>
+    
+<div class="bubbles">
+    <span style="left: 10%; width: 15px; height: 15px;"></span>
+    <span style="left: 20%; width: 25px; height: 25px;"></span>
+    <span style="left: 30%; width: 10px; height: 10px;"></span>
+    <span style="left: 50%; width: 20px; height: 20px;"></span>
+    <span style="left: 70%; width: 30px; height: 30px;"></span>
+    <span style="left: 90%; width: 10px; height: 10px;"></span>
+</div>
+
+<script>
+    function goToNextPage() {
+        const name = document.getElementById('name').value;
+        const dob = document.getElementById('dob').value;
+
+        if (name && dob) {
+            // Redirect to another page
+            window.location.href = "page.html";
+        } else {
+            alert("Please fill out all fields!");
+        }
+    }
+</script>
+
+</body>
+</html>

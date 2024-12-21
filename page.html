@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Giveaway</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom, #141414, #2e2e2e);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px 30px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 18px;
+        }
+
+        .navbar a:hover {
+            color: #ff6f61;
+        }
+
+        /* Main Section */
+        .highlight {
+            display: flex;
+            align-items: center;
+            background: linear-gradient(145deg, #4328a1, #3a1d88);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            margin-bottom: 40px;
+        }
+
+        .highlight img {
+            flex: 1;
+            max-width: 50%;
+            object-fit: cover;
+        }
+
+        .highlight-content {
+            flex: 1;
+            padding: 30px;
+        }
+
+        .highlight-content h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .highlight-content p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .highlight-content button {
+            background: #ff6f61;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            color: #fff;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .highlight-content button:hover {
+            background: #ff8567;
+        }
+
+        /* Popular Clips */
+.clips {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+}
+
+.clip {
+    width: 300px; /* Fixed width */
+    height: 200px; /* Fixed height */
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.clip img {
+    width: 100%; /* Ensure the image fits the clip's width */
+    height: 150px; /* Restrict the image height */
+    object-fit: cover; /* Ensure the image doesn't distort */
+}
+
+.clip p {
+    margin: 10px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.clip:hover {
+    transform: scale(1.05);
+}
+
+/* Scrollbar Styling */
+.clips::-webkit-scrollbar {
+    height: 8px;
+}
+
+.clips::-webkit-scrollbar-thumb {
+    background: #ff6f61;
+    border-radius: 10px;
+}
+
+.clips::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+        /* Scrollbar Styling */
+        .clips::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .clips::-webkit-scrollbar-thumb {
+            background: #ff6f61;
+            border-radius: 10px;
+        }
+
+        .clips::-webkit-scrollbar-track {
+            background: transparent;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Navbar -->
+        <div class="navbar">
+            <a href="bd.html">Home</a>
+       
+        </div>
+
+        <!-- Highlight Section -->
+        <div class="highlight">
+            <img src="profile syawal.jpg" alt="Character Image">
+            <div class="highlight-content">
+                <h1>MUHAMMAD SYAWAL</h1>
+                <p>The handsome and cute man that i've ever seen ever</p>
+                <p>HAPPY BIRTHDAY SAYANG</p>
+                <P>I HOPE YOU'RE ENJOY THIS</P>
+                
+            </div>
+        </div>
+
+        <!-- Popular Clips Section -->
+        <h2>For You</h2>
+        <div class="clips">
+            <div class="clip">
+                <a href="Gallery.html" style="text-decoration: none; color: inherit;">
+                    <img src="photo_3d.png" alt="Clip 1">
+                    <p>Our Photo</p>
+                </a>
+            </div>
+             <!-- Satoru Gojo Being Iconic -->
+             <div class="clip">
+                <a href="wish.html" style="text-decoration: none; color: inherit;">
+                    <img src="wishes_3d.png" alt="Satoru Gojo Being Iconic">
+                    <p>The Wishes</p>
+                </a>
+            </div>
+           <!-- Every Gojo Satoru Scene -->
+           <div class="clip">
+            <a href="video.html" style="text-decoration: none; color: inherit;">
+                <img src="video_3d.png" alt="Every Gojo Satoru Scene">
+                <p>Capture Every moments</p>
+            </a>
+        </div>
+        <!-- Jujutsu Kaisen Best of Gojo -->
+        <div class="clip">
+            <a href="surprise.html" style="text-decoration: none; color: inherit;">
+                <img src="surprise_3d.png" alt="Jujutsu Kaisen Best of Gojo">
+                <p>Birthday surprise</p>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
